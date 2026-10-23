@@ -1,0 +1,44 @@
+{
+  "application_version": "0.11.2",
+  "sphinx_strict_build": true,
+  "internal_links": {
+    "html_pages": 14,
+    "internal_references_checked": 1326,
+    "broken_links": 0,
+    "images_have_alt": true,
+    "css_resources_present": true
+  },
+  "browser": {
+    "pages": 12,
+    "viewports": [
+      {
+        "width": 1440,
+        "horizontal_overflow": false,
+        "menu_keyboard_verified": false
+      },
+      {
+        "width": 390,
+        "horizontal_overflow": false,
+        "menu_keyboard_verified": true
+      },
+      {
+        "width": 360,
+        "horizontal_overflow": false,
+        "menu_keyboard_verified": true
+      }
+    ],
+    "errors": [],
+    "chinese_search_results": 4,
+    "download_link_and_sha256_verified": true
+  },
+  "apk_version_and_sha256_match": true,
+  "application_gateway_preview": {
+    "url": "https://flame-david-lightbox-jessica.trycloudflare.com/manual/index.html",
+    "authenticated_public_preview": true,
+    "mobile_menu": true,
+    "chinese_search": true,
+    "download_button": true,
+    "console_and_http_errors": [],
+    "readthedocs_deployed": false
+  }
+}

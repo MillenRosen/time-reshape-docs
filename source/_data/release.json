@@ -1,0 +1,13 @@
+{
+  "version": "0.11.2",
+  "build": 16,
+  "release_date": "2026-10-23",
+  "apk_name": "TimeReshape-Android-v0.11.2-build16.apk",
+  "apk_size": "9.7 MB",
+  "apk_sha256": "e33bc02cad92516aef34ea4ea880d21708d40d15d3bc4e3a0a4a6382b57406c3",
+  "download_url": "https://flame-david-lightbox-jessica.trycloudflare.com/downloads/",
+  "preview_url": "https://flame-david-lightbox-jessica.trycloudflare.com/",
+  "backup_url": "https://time-reshape.tailfde0f6.ts.net/",
+  "backup_download_url": "https://time-reshape.tailfde0f6.ts.net/downloads/",
+  "repository_url": "https://github.com/MillenRosen/time-reshape-docs"
+}

@@ -1,0 +1,4 @@
+sphinx==7.4.7
+sphinx_rtd_theme==3.1.0
+myst_parser==3.0.1
+jieba==0.42.1
