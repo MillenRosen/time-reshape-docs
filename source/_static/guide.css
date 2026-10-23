@@ -119,6 +119,10 @@ body, .wy-nav-content-wrap { background: var(--canvas); }
 .checksum p { font-size: 13px; margin: 0; }
 .guide-footer-note { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin: 4px 0 25px; color: #6b7b64; font-size: 12px; }
 .guide-footer-note a { color: var(--jade); }
+.rst-content .pdf-reading-link { margin: 16px 0 8px; font-size: 13px; }
+.pdf-download-panel { margin-top: 34px; padding: 24px 28px; background: var(--soft); border: 1px solid var(--line); border-radius: 16px; }
+.rst-content .pdf-download-panel h2 { margin-top: 0; }
+.rst-content .pdf-download-panel p:last-child { margin-bottom: 0; font-size: 13px; color: var(--muted); }
 footer { color: #75806c; font-size: 11px; }
 footer p { font-size: 11px; line-height: 1.7; }
 .btn-neutral, .btn-neutral:visited { background: #edf2e6 !important; color: var(--jade-dark) !important; border: 1px solid #d8e1d0; border-radius: 8px; box-shadow: none; font-size: 13px; padding: 10px 15px; }

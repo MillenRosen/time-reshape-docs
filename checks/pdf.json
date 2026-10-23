@@ -1,0 +1,25 @@
+{
+  "pages": 23,
+  "chapters": 12,
+  "paragraphs_verified": 203,
+  "embedded_fonts": 5,
+  "clickable_links": 121,
+  "chapter_pages": {
+    "时光重塑使用手册": 3,
+    "三分钟入门": 5,
+    "安装与下载": 7,
+    "连接服务": 9,
+    "史实问答": 11,
+    "遗迹影像": 13,
+    "实时相机": 15,
+    "账号与历史": 17,
+    "数据与权限": 19,
+    "常见问题": 20,
+    "版本与更新": 22,
+    "关于这份手册": 23
+  },
+  "a4": true,
+  "searchable_chinese": true,
+  "bytes": 4730486,
+  "sha256": "760c5be0eb61cfe9668cc43def26a7282c507a2475e1702fdc4c7d7e5de34e28"
+}

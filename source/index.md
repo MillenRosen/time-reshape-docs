@@ -7,6 +7,8 @@
 
 <div class="edition-line"><span class="status-dot"></span> Android 与网页 · v{{ version }} <span>使用指南 · 安装 · 常见问题</span></div>
 
+<p class="screen-only pdf-reading-link"><a href="_downloads/time-reshape-guide.pdf" download>把完整手册留在身边 · 下载 PDF ↗</a></p>
+
 ## 你想从哪里开始？
 
 <div class="guide-cards">

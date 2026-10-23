@@ -1,0 +1,107 @@
+/* Print-only layout. Content comes from the same Sphinx HTML as the website. */
+@page {
+  size: A4;
+  margin: 20mm 19mm 19mm;
+  background: #fcfaf4;
+  @top-left { content: "时光重塑  /  使用手册"; font: 8pt "Noto Sans CJK SC"; color: #6b7d6c; }
+  @top-right { content: string(chapter); font: 8pt "Noto Sans CJK SC"; color: #6b7d6c; }
+  @bottom-left { content: "循迹圆明园，重拾旧时光。"; font: 8pt "Noto Sans CJK SC"; color: #788574; }
+  @bottom-right { content: counter(page) " / " counter(pages); font: 8pt "Noto Sans CJK SC"; color: #426959; }
+}
+@page cover {
+  margin: 19mm;
+  @top-left { content: none; } @top-right { content: none; }
+  @bottom-left { content: none; } @bottom-right { content: none; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; color: #34493e; font: 10.2pt/1.6 "Noto Sans CJK SC", sans-serif; }
+h1, h2, h3 { color: #235244; break-after: avoid; font-family: "Noto Serif CJK SC", serif; }
+h1 { font-size: 25pt; line-height: 1.4; margin: 0 0 5mm; bookmark-level: 1; string-set: chapter content(); }
+h2 { font-size: 15pt; margin: 5mm 0 2.5mm; bookmark-level: 2; }
+h3 { font-size: 11.5pt; margin: 4mm 0 2mm; bookmark-level: 3; }
+p { margin: 0 0 2.5mm; orphans: 3; widows: 3; }
+ul, ol { padding-left: 6mm; margin: 2mm 0 4mm; }
+li { padding-left: 1mm; margin-bottom: .8mm; orphans: 2; widows: 2; }
+strong { font-weight: 700; }
+a { color: #28755f; text-decoration: none; }
+p a, li a { border-bottom: .2mm solid #cad6bf; }
+code { font: 9pt "DejaVu Sans Mono", "Noto Sans CJK SC", monospace; color: #476451; background: #edf1e7; overflow-wrap: anywhere; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 4mm; background: #edf1e7; border-radius: 2mm; }
+img { max-width: 100%; height: auto; }
+figure { margin: 4mm auto 5mm; text-align: center; break-inside: avoid; }
+figure img.app-shot { width: auto; max-height: 88mm; border: .3mm solid #dce4d5; border-radius: 3mm; }
+figcaption { margin-top: 2mm; font-size: 8.5pt; color: #778371; }
+figcaption p { margin: 0; }
+.caption-number { display: none; }
+table { width: 100%; border-collapse: collapse; margin: 3mm 0 4mm; font-size: 9pt; table-layout: fixed; break-inside: avoid; }
+table:has(th:nth-child(2):last-child) th:first-child { width: 30%; }
+thead { display: table-header-group; }
+th, td { padding: 2mm 3mm; vertical-align: top; border-bottom: .25mm solid #dbe2d4; overflow-wrap: anywhere; }
+th { text-align: left; background: #e6efde; color: #235244; }
+td { background: #f2f4eb; }
+tr { break-inside: avoid; }
+td p, th p { margin: 0; }
+.admonition { margin: 4mm 0; padding: 3.5mm 4.5mm; background: #edf3e6; border-left: 1mm solid #8aab82; border-radius: 2mm; break-inside: avoid; }
+.admonition-title { color: #285b48; font-weight: 700; margin-bottom: 1mm; }
+.admonition p:last-child { margin-bottom: 0; }
+.chapter { break-before: page; }
+.chapter-number, .eyebrow { color: #829371; letter-spacing: .7mm; font-size: 8.5pt; margin-bottom: 4mm; }
+.chapter-web { float: right; letter-spacing: 0; font-size: 8pt; }
+.cover { page: cover; break-after: page; }
+.cover-brand { display: flex; align-items: center; gap: 5mm; border-bottom: .3mm solid #d6e1cb; padding-bottom: 5mm; margin-bottom: 10mm; font-size: 8pt; color: #6b8068; letter-spacing: .5mm; }
+.cover-brand img { width: 15mm; }
+.cover-kicker { font-family: "Noto Serif CJK SC"; font-size: 18pt; color: #52785c; letter-spacing: 2mm; margin: 0; }
+.cover h1 { font-size: 39pt; letter-spacing: 2mm; margin: 0 0 3mm; bookmark-level: none; string-set: none; }
+.cover-subtitle { color: #658365; font-family: "Noto Serif CJK SC"; font-size: 17pt; margin-bottom: 8mm; }
+.cover-landscape { width: 172mm; height: 66mm; object-fit: cover; border-radius: 14mm 3mm 3mm 3mm; }
+.cover-companion { display: flex; align-items: center; gap: 8mm; margin: 8mm 0 7mm; }
+.cover-companion > img { width: 42mm; height: 45mm; object-fit: contain; }
+.cover-companion p { font-size: 9pt; color: #6d7e69; }
+.cover-companion .cover-greeting { font: 14pt/1.7 "Noto Serif CJK SC"; color: #355d46; }
+.cover-edition { font-size: 9pt; color: #657c65; border-top: .3mm solid #d6e1cb; padding-top: 4mm; }
+.cover-edition span { float: right; }
+.book-toc { break-after: page; }
+.book-toc h1 { string-set: chapter "阅读导航"; }
+.book-toc > p { color: #6c7c68; font-size: 9.5pt; }
+.book-toc ol { list-style: none; margin: 6mm 0; padding: 0; }
+.book-toc li { margin: 0; padding: 2.5mm 0; border-bottom: .2mm solid #dce3d3; }
+.book-toc li a { display: block; border: 0; }
+.book-toc li a::after { content: leader(space) target-counter(attr(href), page); color: #6f846a; }
+.toc-number { color: #97a483; font-size: 8pt; display: inline-block; width: 12mm; }
+.reading-note { background: #eef3e7; border-radius: 3mm; padding: 4mm 5mm; font-size: 9pt; }
+.reading-note p { margin: 2mm 0; }
+.reading-note a { font-size: 8pt; }
+.guide-hero { display: flex; gap: 7mm; align-items: center; margin: 2mm 0 6mm; }
+.hero-words { width: 85mm; }
+.overline { font-size: 7pt; color: #81916e; letter-spacing: .3mm; }
+.hero-words h2 { font-size: 22pt; margin: 2mm 0 4mm; line-height: 1.5; bookmark-level: none; }
+.hero-words p { font-size: 9pt; }
+.hero-scene { position: relative; width: 80mm; }
+.hero-landscape { width: 80mm; height: 47mm; object-fit: cover; border-radius: 6mm 2mm 2mm 2mm; }
+.hero-mascot { width: 21mm; height: 25mm; object-fit: contain; position: absolute; right: 0; bottom: 3mm; background: #f7f8ef; border-radius: 50%; }
+.scene-caption { display: block; color: #7c8974; font-size: 7pt; margin-top: 2mm; }
+.hero-actions { margin-top: 4mm; }
+.guide-button { display: inline-block; padding: 2mm 3mm; background: #28755f; color: #fff; border-radius: 2mm; font-size: 8pt; }
+.guide-button.outline { background: #e9efdf; color: #28755f; }
+.edition-line { padding: 3mm 0; border-top: .2mm solid #dce4d3; border-bottom: .2mm solid #dce4d3; font-size: 8pt; color: #7a8972; }
+.edition-line > span:last-child { float: right; }
+.guide-cards { display: flex; gap: 3mm; break-inside: avoid; }
+.guide-card { display: block; width: 33.33%; padding: 4mm; background: #eff3e8; border: .2mm solid #dce4d3; border-radius: 3mm; }
+.guide-card h3 { margin: 2mm 0; font-size: 12pt; bookmark-level: none; }
+.guide-card p { font-size: 8.5pt; line-height: 1.8; }
+.card-number, .card-more { font-size: 7.5pt; color: #829371; }
+.app-gallery { display: flex; gap: 5mm; padding: 4mm; border-radius: 3mm; background: #edf2e4; break-inside: avoid; }
+.app-gallery figure { width: 33.33%; margin: 0; }
+.app-gallery img { width: 100%; border-radius: 2mm; }
+.app-gallery figcaption { font-size: 7pt; }
+.download-panel { background: #edf3e3; border: .3mm solid #dbe7cd; border-radius: 4mm; padding: 5mm 6mm; margin: 4mm 0 5mm; break-inside: avoid; }
+.download-panel h2 { margin-top: 1mm; }
+.download-panel p { margin: 2mm 0; }
+.checksum { font: 8.4pt/1.7 "DejaVu Sans Mono", monospace; overflow-wrap: anywhere; padding: 3mm 4mm; background: #edf2e6; border-radius: 2mm; }
+.checksum p { margin: 0; font: inherit; }
+.mascot-about { display: block; max-width: 64mm; max-height: 55mm; margin: 4mm auto; }
+/* Keep the short release notes and their closing note together. */
+#page-releases { font-size: 9.5pt; line-height: 1.5; }
+#page-releases h2 { margin-top: 4mm; }
+#page-releases p { margin-bottom: 2mm; }
+.screen-only { display: none; }

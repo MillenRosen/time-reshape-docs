@@ -1,11 +1,25 @@
 version: 2
+formats: [pdf]
 build:
   os: ubuntu-24.04
   tools:
     python: "3.11"
+  apt_packages:
+    - fonts-noto-cjk
+    - fontconfig
+    - libpango-1.0-0
+    - libpangoft2-1.0-0
+  jobs:
+    build:
+      pdf:
+        - python tools/build_pdf.py --html-dir "$READTHEDOCS_OUTPUT/html" --output "$READTHEDOCS_OUTPUT/pdf/time-reshape.pdf" --copy-to-site
+        - python tools/check_pdf.py "$READTHEDOCS_OUTPUT/pdf/time-reshape.pdf"
+    post_build:
+      - python tools/check_site.py "$READTHEDOCS_OUTPUT/html"
 sphinx:
   configuration: source/conf.py
   fail_on_warning: true
 python:
   install:
     - requirements: source/requirements.txt
+    - requirements: source/requirements-pdf.txt

@@ -38,7 +38,7 @@ git push origin --tags
 
 可以手动配置仓库 URL `https://github.com/MillenRosen/time-reshape-docs` 导入；这种方式还需要配置 GitHub webhook 或安装 GitHub App，才能在后续推送时自动构建。
 
-当前 `.readthedocs.yaml` 使用 Ubuntu 24.04、Python 3.11，并从 `source/requirements.txt` 安装锁定的文档依赖；无 GPU 依赖，不配置应用口令，不启用尚未验证的 PDF 构建。
+当前 `.readthedocs.yaml` 使用 Ubuntu 24.04、Python 3.11，从 `source/requirements.txt` 与 `source/requirements-pdf.txt` 安装文档和 PDF 依赖，并安装 Noto CJK 字体和 Pango。PDF 步骤通过 `tools/build_pdf.py` 复用 HTML 正文，生成到平台的 `pdf` 目录，同时复制到网页 `_downloads/time-reshape-guide.pdf`。无 GPU 依赖，不配置应用口令。
 
 ## 4. 发布确认
 
@@ -46,6 +46,7 @@ git push origin --tags
 - 本地严格构建与内部链接检查通过；启用可选 GitHub Actions 时也检查其结果。
 - Read the Docs 的构建成功，构建记录对应刚上传的提交。
 - 公开站点可访问，站内链接和中文搜索可用。
+- PDF 下载返回有效 PDF，目录与正文齐全，中文字体嵌入，链接可跳转；抽查封面、长表格、截图和最后一页。
 - 下载按钮进入实际的软件页面，不把 iOS 工程 ZIP 称为 IPA。
 - 后续普通推送能触发 Read the Docs 构建，或明确记录所采用的手动构建方式。
 
