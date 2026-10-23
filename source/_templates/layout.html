@@ -1,4 +1,19 @@
 {% extends "!layout.html" %}
+{# Use local Chinese full-text search. The theme's versions.js also binds the
+   hosted search modal unconditionally, even when both selectors are disabled. #}
+{% block scripts %}
+{% if not embedded %}
+{% for scriptfile in script_files %}
+{{ js_tag(scriptfile) }}
+{% endfor %}
+<script src="{{ pathto('_static/js/theme.js', 1) }}"></script>
+{% if use_opensearch %}
+<link rel="search" type="application/opensearchdescription+xml"
+      title="{{ _('Search within %(docstitle)s', docstitle=docstitle|e) }}"
+      href="{{ pathto('_static/opensearch.xml', 1) }}" />
+{% endif %}
+{% endif %}
+{% endblock %}
 {% block sidebartitle %}
 {{ super() }}
 <div class="sidebar-edition">使用手册 <span>v{{ release }}</span></div>

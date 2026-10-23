@@ -2,6 +2,8 @@
 
 面向使用者的中文手册，覆盖 Android **v0.11.2 / build 16** 与网页预览。独立于应用仓库，使用 Sphinx、MyST Markdown 和 Read the Docs 主题构建。
 
+[在线阅读](https://time-reshape.readthedocs.io/zh-cn/latest/) · [安装与下载](https://time-reshape.readthedocs.io/zh-cn/latest/downloads.html) · [GitHub 仓库](https://github.com/MillenRosen/time-reshape-docs)
+
 参考 [MillenRosen/tnlearn_doc](https://github.com/MillenRosen/tnlearn_doc) 的文档组织，采用玉绿与米白配色、圆圆形象、实际界面截图和手机适配。
 
 ## 本地构建

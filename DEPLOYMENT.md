@@ -1,6 +1,6 @@
 # 发布到 GitHub 与 Read the Docs
 
-推荐仓库为 `MillenRosen/time-reshape-docs`，默认分支 `main`。Read the Docs 项目名建议 `time-reshape`；实际公开地址以创建项目后的结果为准，不在部署成功前假定该名称已经可用。
+仓库为 [MillenRosen/time-reshape-docs](https://github.com/MillenRosen/time-reshape-docs)，默认分支 `main`。Read the Docs 项目为 `time-reshape`，公开地址为 <https://time-reshape.readthedocs.io/zh-cn/latest/>。首次发布与验收记录见 [PUBLISHING.md](PUBLISHING.md)。以下创建步骤用于说明部署方法，已有项目不重复创建。
 
 ## 1. 先完成本地检查
 
@@ -31,7 +31,7 @@ git push origin --tags
 
 1. 登录 [Read the Docs Community](https://app.readthedocs.org/)。
 2. 点击 **Add project**，在 GitHub 仓库中选择 `time-reshape-docs`。如果没有列出，检查 Read the Docs GitHub App 是否获准访问该新仓库。
-3. 项目语言选 **Simplified Chinese / zh_CN**，默认分支选 `main`。
+3. 项目语言选 **Simplified Chinese / zh-cn**，默认分支选 `main`。Sphinx 的 `source/conf.py` 中语言代码使用 `zh_CN`，与平台 API 的写法不同。
 4. 配置文件路径为根目录 `.readthedocs.yaml`，Sphinx 配置为 `source/conf.py`。
 5. 提交导入并等待首个构建，确认结果为成功。
 6. 打开 **View docs**，检查首页、问答指南、安装页、搜索和移动端目录。
@@ -54,5 +54,13 @@ git push origin --tags
 ## 5. 后续更新
 
 更新正文、版本或下载入口 → `make check` → Git 提交与推送 → 等待 Read the Docs 构建 → 检查公开页面。保留历史标签，回溯时使用普通修复提交或对应版本构建，不重写已有历史。
+
+当前项目通过 API 导入，采用手动触发云端构建；尚未连接 GitHub App/webhook，不应假定每次推送都会自动发布。推送后可以在 [构建列表](https://app.readthedocs.org/projects/time-reshape/builds/) 点击 **Build version / latest**，或运行：
+
+```bash
+python3 tools/build_readthedocs.py --token-file /path/outside/repo/readthedocs.token
+```
+
+凭据文件仅供本人读取，放在仓库之外。命令只输出构建地址；请求成功不等于构建成功，需核对该构建的结果及提交号。以后在项目的 **Settings → Integrations** 连接 GitHub 后，用一次正常推送验证自动构建，再更新本说明。
 
 平台参考：[添加项目](https://docs.readthedocs.com/platform/stable/intro/add-project.html)、[配置文件](https://docs.readthedocs.com/platform/stable/config-file/)、[API v3](https://docs.readthedocs.com/platform/stable/api/v3.html)。

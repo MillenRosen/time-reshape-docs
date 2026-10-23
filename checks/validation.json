@@ -39,6 +39,6 @@
     "chinese_search": true,
     "download_button": true,
     "console_and_http_errors": [],
-    "readthedocs_deployed": false
+    "scope": "Temporary application gateway preview; Read the Docs verification is recorded separately."
   }
 }

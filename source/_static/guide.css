@@ -9,6 +9,13 @@
   --line: #dde4d7;
   --soft: #eef3e8;
   --serif: "Noto Serif CJK SC", "Songti SC", "STSong", "SimSun", serif;
+  --readthedocs-flyout-background-color: #28574b;
+  --readthedocs-flyout-color: #f4f0e2;
+  --readthedocs-flyout-current-version-color: #f0d8a3;
+  --readthedocs-flyout-link-color: #f4f0e2;
+  --readthedocs-flyout-item-link-color: #f4f0e2;
+  --readthedocs-flyout-section-heading-color: #d9e9d0;
+  --readthedocs-flyout-font-size: 13px;
 }
 html { scroll-padding-top: 24px; }
 body, input, button, select, textarea {
