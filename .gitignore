@@ -1,0 +1,13 @@
+.venv/
+.build/
+build/
+_build/
+__pycache__/
+*.pyc
+.env
+.env.*
+*.token
+*.apk
+*.ipa
+*.log
+.DS_Store
