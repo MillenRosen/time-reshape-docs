@@ -23,7 +23,7 @@ make serve
 ```powershell
 py -3.11 -m venv .venv
 .venv\Scripts\python -m pip install -r source/requirements.txt
-.venv\Scripts\sphinx-build -b html -n -W --keep-going source build/html
+.venv\Scripts\sphinx-build -a -b html -n -W --keep-going source build/html
 .venv\Scripts\python tools/check_site.py build/html
 .venv\Scripts\python -m http.server 8056 --bind 127.0.0.1 --directory build/html
 ```

@@ -1,5 +1,5 @@
 SPHINXBUILD ?= sphinx-build
-SPHINXOPTS ?= -n -W --keep-going
+SPHINXOPTS ?= -a -n -W --keep-going
 .PHONY: html clean serve check
 html:
 	$(SPHINXBUILD) -b html $(SPHINXOPTS) source build/html

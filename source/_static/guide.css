@@ -159,7 +159,10 @@ footer p { font-size: 11px; line-height: 1.7; }
   .rst-content .guide-card p { margin-bottom: 12px; }
   .app-gallery { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: min(76%, 240px); overflow-x: auto; scroll-snap-type: x mandatory; padding: 22px; gap: 18px; }
   .app-gallery figure { scroll-snap-align: center; }
-  .rst-content .wy-table-responsive table { min-width: 420px; }
+  .rst-content .wy-table-responsive table { min-width: 0; table-layout: fixed; }
+  .rst-content .wy-table-responsive table th:first-child { width: 34%; }
+  .rst-content .wy-table-responsive table td,
+  .rst-content .wy-table-responsive table th { padding: 10px 9px; overflow-wrap: anywhere; }
   .download-panel { padding: 24px; }
   .rst-content .download-panel h2 { font-size: 26px; }
   .rst-content .app-shot img { max-width: 100%; }
