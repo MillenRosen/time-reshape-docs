@@ -6,8 +6,8 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 release_data = json.loads((ROOT / "_data/release.json").read_text(encoding="utf-8"))
 project = "时光重塑"
-author = "时光重塑项目组"
-copyright = "2026, 时光重塑项目组"
+author = ""
+copyright = ""
 version = release = release_data["version"]
 language = "zh_CN"
 extensions = ["myst_parser"]
@@ -27,6 +27,7 @@ html_js_files = [("guide.js", {"defer": "defer"})]
 templates_path = ["_templates"]
 html_show_sourcelink = False
 html_show_sphinx = False
+html_show_copyright = False
 html_last_updated_fmt = None
 html_theme_options = {
     "logo_only": False,

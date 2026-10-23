@@ -89,7 +89,6 @@ def assemble(html_dir, release):
     version = html.escape(str(release["version"]))
     book = f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
       <title>时光重塑 · 使用手册 v{version}</title>
-      <meta name="author" content="时光重塑项目组">
       <meta name="description" content="时光重塑完整使用手册：安装、问答、遗迹复原、实时相机与账号指南。">
       </head><body>
       <section class="cover">

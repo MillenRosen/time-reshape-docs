@@ -4,7 +4,7 @@
 
 [在线阅读](https://time-reshape.readthedocs.io/zh-cn/latest/) · [PDF 使用手册](https://time-reshape.readthedocs.io/zh-cn/latest/_downloads/time-reshape-guide.pdf) · [安装与下载](https://time-reshape.readthedocs.io/zh-cn/latest/downloads.html) · [GitHub 仓库](https://github.com/MillenRosen/time-reshape-docs)
 
-参考 [MillenRosen/tnlearn_doc](https://github.com/MillenRosen/tnlearn_doc) 的文档组织，采用玉绿与米白配色、圆圆形象、实际界面截图和手机适配。
+手册采用玉绿与米白配色、圆圆形象、实际界面截图和手机适配。
 
 ## 本地构建
 
