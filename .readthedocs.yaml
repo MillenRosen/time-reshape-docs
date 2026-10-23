@@ -14,6 +14,8 @@ build:
       pdf:
         - python tools/build_pdf.py --html-dir "$READTHEDOCS_OUTPUT/html" --output "$READTHEDOCS_OUTPUT/pdf/time-reshape.pdf" --copy-to-site
         - python tools/check_pdf.py "$READTHEDOCS_OUTPUT/pdf/time-reshape.pdf"
+        # Read the Docs requires exactly one file in the PDF output directory.
+        - rm "$READTHEDOCS_OUTPUT/pdf/time-reshape.json"
     post_build:
       - python tools/check_site.py "$READTHEDOCS_OUTPUT/html"
 sphinx:
