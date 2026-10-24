@@ -35,6 +35,8 @@ for path, page in pages.items():
         errors.append(f'{path.relative_to(root)}: image without alt attribute')
     for link in page.links:
         url = urlsplit(link)
+        if (url.hostname or '').endswith('.trycloudflare.com'):
+            errors.append(f'{path.relative_to(root)}: temporary service link must use fixed navigation: {link}')
         if url.scheme or url.netloc:
             continue
         if url.path.startswith('/'):

@@ -43,6 +43,7 @@ def check(path):
             links += 1
             action = annotation.get("/A", {})
             assert not str(action.get("/URI", "")).startswith("file:"), "Private filesystem link in PDF"
+            assert ".trycloudflare.com" not in str(action.get("/URI", "")), "Temporary service link in PDF; rebuild with current release data"
             destination = annotation.get("/Dest", action.get("/D"))
             if isinstance(destination, str):
                 assert destination in reader.named_destinations, f"Broken PDF link: {destination}"

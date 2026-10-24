@@ -1,0 +1,14 @@
+{
+  "viewports": [
+    1440,
+    390,
+    360
+  ],
+  "rotation": true,
+  "failure_fallback": true,
+  "invalid_address_rejected": true,
+  "javascript_disabled": true,
+  "real_https_cors": true,
+  "test_dns_override": "103.84.155.153",
+  "gateway_commit": "6390d7a"
+}

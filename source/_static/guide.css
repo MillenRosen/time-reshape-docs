@@ -172,3 +172,14 @@ footer p { font-size: 11px; line-height: 1.7; }
   .rst-content .app-shot img { max-width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; } }
+
+/* Live entry status. Navigation links resolve again on the server on each click. */
+.live-entry-panel{margin:20px 0 28px;padding:20px 22px;border:1px solid #d7e3d1;border-radius:16px;background:#f0f5eb}
+.live-entry-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#285f50}
+.live-entry-heading button{background:#fffdf7;border:1px solid #b8cead;border-radius:999px;padding:8px 14px;color:#285f50;font:inherit;font-size:13px;cursor:pointer;white-space:nowrap}
+.live-entry-heading button:disabled{opacity:.6;cursor:wait}
+.live-entry-heading button:focus-visible{outline:2px solid #285f50;outline-offset:3px}
+.live-entry-panel p{margin:12px 0 0;font-size:14px}
+.live-entry-panel .live-entry-address{font-size:13px;overflow-wrap:anywhere;color:#285f50}
+.live-entry-panel .live-entry-address:empty{display:none}
+.live-entry-panel .live-entry-note{font-size:12px;color:#6d7c6b}

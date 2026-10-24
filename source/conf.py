@@ -46,10 +46,12 @@ if os.environ.get("READTHEDOCS_CANONICAL_URL"):
 def apply_release_data(app, docname, source):
     # Expand before Markdown parsing so URLs and inline code work too.
     # Only known public metadata is substituted; no template evaluation.
+    app.env.note_dependency(str(ROOT / "_data/release.json"))
     for key, value in release_data.items():
         source[0] = source[0].replace("{{ " + key + " }}", str(value))
 
 
 def setup(app):
+    app.add_config_value("guide_release_data", release_data, "env")
     app.connect("source-read", apply_release_data)
     return {"parallel_read_safe": True, "parallel_write_safe": True}

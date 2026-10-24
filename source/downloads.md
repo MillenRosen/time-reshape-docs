@@ -16,6 +16,13 @@ ANDROID · 已签名 APK
 
 :::
 
+<div class="screen-only live-entry-panel" data-live-entry>
+<div class="live-entry-heading"><strong>当前访问入口</strong><button type="button" data-entry-refresh>刷新入口</button></div>
+<p data-entry-status role="status" aria-live="polite">正在获取最新入口…</p>
+<p class="live-entry-address" data-entry-address></p>
+<p class="live-entry-note">上方下载与预览按钮会在点击时重新查询地址，无需保存临时网址。</p>
+</div>
+
 ## 安卓安装步骤
 
 1. 在手机浏览器打开上方下载页，下载 `{{ apk_name }}`。
@@ -60,7 +67,9 @@ SHA-256：
 
 ## 下载地址打不开
 
-加速入口使用临时域名，地址可能更换。先尝试[备用下载入口]({{ backup_download_url }})。若两个入口都不可用，请联系项目提供者获取当前地址和访问口令。
+本手册的下载与预览链接使用固定导航地址，每次点击都会查询服务器记录的最新入口，再前往对应页面。临时域名更换后，不需要更新或重新下载手册；PDF 中的链接也使用同一导航地址。
+
+加速隧道重连时若尚无已注册入口，导航会转到备用服务。若当前加速地址仍打不开，可直接尝试[备用下载入口]({{ backup_download_url }})。固定导航服务也需要网络可达；若两个入口都不可用，请联系项目提供者。
 
 已安装的安卓用户还可在 **我的 → 服务连接** 点击 **加速入口失效时，查找新入口**，找到后再点击 **保存并连接**。
 

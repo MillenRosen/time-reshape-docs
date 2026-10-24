@@ -1,9 +1,9 @@
 {
   "pages": 23,
   "chapters": 12,
-  "paragraphs_verified": 202,
+  "paragraphs_verified": 205,
   "embedded_fonts": 5,
-  "clickable_links": 120,
+  "clickable_links": 121,
   "chapter_pages": {
     "时光重塑使用手册": 3,
     "三分钟入门": 5,
@@ -20,6 +20,6 @@
   },
   "a4": true,
   "searchable_chinese": true,
-  "bytes": 4728810,
-  "sha256": "abb56982fbe9e2b377596fb9771fb1064a219343faf55e01b4ad95d780f66caf"
+  "bytes": 4730136,
+  "sha256": "f472cdb92715356293ca617132b64811ffba052bf711b582cf278e8229b2986e"
 }
