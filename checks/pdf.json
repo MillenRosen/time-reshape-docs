@@ -1,7 +1,7 @@
 {
-  "pages": 23,
+  "pages": 24,
   "chapters": 12,
-  "paragraphs_verified": 206,
+  "paragraphs_verified": 214,
   "embedded_fonts": 5,
   "clickable_links": 121,
   "chapter_pages": {
@@ -16,10 +16,10 @@
     "数据与权限": 19,
     "常见问题": 20,
     "版本与更新": 22,
-    "关于这份手册": 23
+    "关于这份手册": 24
   },
   "a4": true,
   "searchable_chinese": true,
-  "bytes": 4731493,
-  "sha256": "d4276244d0417e6c2c65ebd34b486ec9492656be4c9213cf8d05b8b11abf2864"
+  "bytes": 3750668,
+  "sha256": "628c1097526a80ceaf03a4d0616c0fc5f4d068c9b59245a272e3b7f138234432"
 }

@@ -30,6 +30,7 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; padding: 4mm; background: 
 img { max-width: 100%; height: auto; }
 figure { margin: 4mm auto 5mm; text-align: center; break-inside: avoid; }
 figure img.app-shot { width: auto; max-height: 88mm; border: .3mm solid #dce4d5; border-radius: 3mm; }
+#page-guide--restoration figure img.app-shot { max-height: 70mm; }
 figcaption { margin-top: 2mm; font-size: 8.5pt; color: #778371; }
 figcaption p { margin: 0; }
 .caption-number { display: none; }

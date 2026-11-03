@@ -13,7 +13,7 @@
 
 <div class="guide-cards">
 <a class="guide-card" href="guide/questions.html"><span class="card-number">01 / 问历史</span><h3>和圆圆聊一聊</h3><p>提出圆明园相关问题，阅读故事、史实依据与资料来源。</p><span class="card-more">打开问答指南 ↗</span></a>
-<a class="guide-card" href="guide/restoration.html"><span class="card-number">02 / 看今昔</span><h3>观看遗迹复原</h3><p>从预计算示例开始，用透明叠加或上下分屏对照实景。</p><span class="card-more">打开影像指南 ↗</span></a>
+<a class="guide-card" href="guide/restoration.html"><span class="card-number">02 / 看今昔</span><h3>观看遗迹复原</h3><p>从预计算示例开始，用全屏透明叠加或大屏小窗对照实景。</p><span class="card-more">打开影像指南 ↗</span></a>
 <a class="guide-card" href="guide/live-camera.html"><span class="card-number">03 / 到现场</span><h3>开启实时相机</h3><p>选择手机协同或云端计算，把镜头对准大水法遗址。</p><span class="card-more">选择相机方案 ↗</span></a>
 </div>
 
@@ -22,7 +22,7 @@
 <div class="app-gallery">
 <figure><img src="_static/images/app-home.webp" alt="时光重塑首页：问一问历史与看一看遗迹两个入口"><figcaption>首页 · 从好奇心出发</figcaption></figure>
 <figure><img src="_static/images/app-chat.webp" alt="史实问答欢迎页，中央为圆圆与牛首形象"><figcaption>问答 · 循着史料寻找答案</figcaption></figure>
-<figure><img src="_static/images/app-restoration.webp" alt="大水法复原结果，上下分屏对照同一帧"><figcaption>影像 · 对照同一刻的今昔</figcaption></figure>
+<figure><img src="_static/images/app-restoration.webp" alt="大水法复原结果，大屏小窗对照同一帧"><figcaption>影像 · 对照同一刻的今昔</figcaption></figure>
 </div>
 
 ## 认识时光重塑
