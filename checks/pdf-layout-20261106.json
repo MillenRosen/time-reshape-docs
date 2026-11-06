@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-06",
+  "scope": "PDF print layout only",
+  "layout": {
+    "pages_checked": 33,
+    "image_instances": 12,
+    "decorated_groups": 4,
+    "empty_fragments": 0,
+    "split_image_groups": 0,
+    "images_outside_printable_area": 0
+  },
+  "regression": {
+    "old_layout_rejected": true,
+    "reason": "Empty decorated fragment {'app-gallery'} on page 3"
+  },
+  "visual_review": {
+    "contact_sheet_pages": 33,
+    "full_size_pages": [
+      3,
+      4
+    ],
+    "gallery_images_and_captions_visible_on_page": 3,
+    "maintenance_cards_on_page": 4,
+    "no_empty_gallery_fragments": true
+  },
+  "pdf_sha256": "148a614cba4d4ba94598a4c6ecc59eceae3c60206db9ab9bb599129d13829d37",
+  "pdf_bytes": 4080348
+}

@@ -13,6 +13,8 @@ from bs4 import BeautifulSoup
 from weasyprint import CSS, HTML
 from weasyprint.text.fonts import FontConfiguration
 
+from check_pdf_layout import audit_layout
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = "https://time-reshape.readthedocs.io/zh-cn/latest/"
@@ -71,6 +73,36 @@ def assemble(html_dir, release):
                 link["href"] = "#" + page_id(target_path) + ("--" + unquote(url.fragment) if url.fragment else "")
             else:
                 link["href"] = urljoin(SITE + path, link["href"])
+        # A single table row is atomic in paged media. Flex galleries can paint
+        # an empty background on one page and move their images to the next.
+        for gallery in body.select(".app-gallery"):
+            table = soup.new_tag("table", attrs={"class": "print-gallery", "role": "presentation"})
+            row = soup.new_tag("tr")
+            tbody = soup.new_tag("tbody")
+            tbody.append(row)
+            table.append(tbody)
+            for figure in list(gallery.find_all("figure", recursive=False)):
+                cell = soup.new_tag("td")
+                cell.append(figure.extract())
+                row.append(cell)
+            heading = gallery.find_previous_sibling()
+            group = soup.new_tag("div", attrs={"class": "print-gallery-group"})
+            gallery.insert_before(group)
+            if heading is not None and heading.name in {"h2", "h3"}:
+                group.append(heading.extract())
+            group.append(table)
+            gallery.decompose()
+        for cards in body.select(".guide-cards"):
+            table = soup.new_tag("table", attrs={"class": "print-cards", "role": "presentation"})
+            row = soup.new_tag("tr")
+            tbody = soup.new_tag("tbody")
+            tbody.append(row)
+            table.append(tbody)
+            for card in list(cards.find_all("a", recursive=False)):
+                cell = soup.new_tag("td")
+                cell.append(card.extract())
+                row.append(cell)
+            cards.replace_with(table)
         # A new chapter is the print equivalent of a web page, preserving its body.
         chapters.append(
             f'<article class="chapter" id="{identifier}">'
@@ -148,11 +180,12 @@ def main():
             stylesheets=[CSS(filename=ROOT / "tools/pdf.css", font_config=fonts)], font_config=fonts)
         if messages:
             raise ValueError("PDF rendering warnings:\n" + "\n".join(messages))
+        layout_checks = audit_layout(document, BeautifulSoup(book, "html.parser"))
         document.write_pdf(args.output, optimize_images=True, jpeg_quality=92, dpi=180)
     finally:
         logger.removeHandler(handler)
     metadata = {"application_version": release["version"], "pages": len(document.pages),
-                "chapters": chapters, "bytes": args.output.stat().st_size,
+                "chapters": chapters, "layout_checks": layout_checks, "bytes": args.output.stat().st_size,
                 "sha256": hashlib.sha256(args.output.read_bytes()).hexdigest()}
     args.output.with_suffix(".json").write_text(json.dumps(metadata, ensure_ascii=False, indent=2) + "\n")
     if args.copy_to_site:

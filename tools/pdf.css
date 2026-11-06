@@ -86,15 +86,19 @@ td p, th p { margin: 0; }
 .guide-button.outline { background: #e9efdf; color: #28755f; }
 .edition-line { padding: 3mm 0; border-top: .2mm solid #dce4d3; border-bottom: .2mm solid #dce4d3; font-size: 8pt; color: #7a8972; }
 .edition-line > span:last-child { float: right; }
-.guide-cards { display: flex; gap: 3mm; break-inside: avoid; }
-.guide-card { display: block; width: 33.33%; padding: 4mm; background: #eff3e8; border: .2mm solid #dce4d3; border-radius: 3mm; }
+.print-cards { table-layout: fixed; border-collapse: separate; border-spacing: 3mm 0; width: 100%; margin: 2mm 0 3mm; }
+.print-cards td { width: auto; padding: 3mm; background: #eff3e8; border: .2mm solid #dce4d3; border-radius: 3mm; }
+.guide-card { display: block; color: #34493e; }
 .guide-card h3 { margin: 2mm 0; font-size: 12pt; bookmark-level: none; }
 .guide-card p { font-size: 8.5pt; line-height: 1.8; }
 .card-number, .card-more { font-size: 7.5pt; color: #829371; }
-.app-gallery { display: flex; gap: 5mm; padding: 4mm; border-radius: 3mm; background: #edf2e4; break-inside: avoid; }
-.app-gallery figure { width: 33.33%; margin: 0; }
-.app-gallery img { width: 100%; border-radius: 2mm; }
-.app-gallery figcaption { font-size: 7pt; }
+/* Print gallery: one atomic row, heading included; no fragmented flex background. */
+.print-gallery-group { break-inside: avoid; }
+.print-gallery { table-layout: fixed; width: 100%; margin: 2mm 0 4mm; border-collapse: separate; border-spacing: 3mm 0; background: #edf2e4; border-radius: 3mm; }
+.print-gallery td { width: auto; padding: 3mm 0; border: 0; background: transparent; text-align: center; }
+.print-gallery figure { margin: 0; }
+.print-gallery img { width: auto; max-width: 100%; max-height: 55mm; border-radius: 2mm; }
+.print-gallery figcaption { font-size: 7pt; line-height: 1.5; }
 .download-panel { background: #edf3e3; border: .3mm solid #dbe7cd; border-radius: 4mm; padding: 5mm 6mm; margin: 4mm 0 5mm; break-inside: avoid; }
 .download-panel h2 { margin-top: 1mm; }
 .download-panel p { margin: 2mm 0; }
@@ -111,9 +115,6 @@ figure img.workspace-shot { max-height: 85mm; width: auto; border: .3mm solid #d
 
 .cover-revision { font-size: 8pt; color: #788574; margin-top: 2mm; }
 /* Keep new overview and maintenance chapters from leaving short spill pages. */
-#page-index .app-gallery img { width: auto; max-width: 100%; max-height: 65mm; }
-#page-index .guide-cards { margin: 2mm 0 3mm; }
-#page-index .guide-card { padding: 3mm; }
 #page-guide--service-hub, #page-guide--deployment { font-size: 9.8pt; line-height: 1.5; }
 #page-guide--service-hub figure img.workspace-shot { max-height: 70mm; }
 #page-guide--service-hub h2, #page-guide--deployment h2 { margin-top: 4mm; }
