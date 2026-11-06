@@ -1,0 +1,59 @@
+{
+  "documentation_date": "2026-11-06",
+  "application_version": "0.14.1",
+  "android_build": 23,
+  "chapters": 15,
+  "html_pages_including_search_index": 17,
+  "internal_references_checked": 2221,
+  "broken_links": 0,
+  "browser": {
+    "site": "local-build",
+    "viewports": [
+      {
+        "width": 1440,
+        "pages": 15,
+        "overflow": false,
+        "broken_images": false
+      },
+      {
+        "width": 390,
+        "pages": 15,
+        "overflow": false,
+        "broken_images": false
+      }
+    ],
+    "errors": [],
+    "mobile_navigation": true,
+    "chinese_search": true,
+    "pdf_link": "_downloads/time-reshape-guide.pdf"
+  },
+  "pdf": {
+    "pages": 33,
+    "chapters": 15,
+    "paragraphs_verified": 350,
+    "embedded_fonts": 5,
+    "clickable_links": 178,
+    "chapter_pages": {
+      "时光重塑使用手册": 3,
+      "三分钟入门": 5,
+      "安装与下载": 7,
+      "连接服务": 9,
+      "史实问答": 11,
+      "遗迹影像": 13,
+      "实时相机": 16,
+      "账号与历史": 18,
+      "数据与权限": 20,
+      "模型后台与配准": 21,
+      "服务台与资源管理": 23,
+      "部署与交付文件": 25,
+      "常见问题": 27,
+      "版本与更新": 30,
+      "关于这份手册": 33
+    },
+    "a4": true,
+    "searchable_chinese": true,
+    "bytes": 4080601,
+    "sha256": "8f12ce526192d1b1c64778e885129712abdb9e26e308bc784255e462d061bce1"
+  },
+  "live_application_changed": false
+}

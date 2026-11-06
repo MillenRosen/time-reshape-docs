@@ -98,8 +98,8 @@ def assemble(html_dir, release):
         <img class="cover-landscape" src="{asset('dashuifa.webp')}" alt="圆明园大水法现存遗址">
         <div class="cover-companion"><img src="{asset('yuanyuan.webp')}" alt="圆圆，圆明园记忆精灵">
           <div><p class="cover-greeting">和圆圆一起，<br>从一段史料、一帧影像开始。</p>
-          <p>安装与连接 · 史实问答 · 遗迹复原<br>实时相机 · 账号与历史 · 常见问题</p></div></div>
-        <div class="cover-edition">ANDROID &amp; WEB <span>v{version} / build {release['build']}</span></div>
+          <p>安装与连接 · 问答与复原 · 账号历史<br>模型后台 · 服务台 · 工程部署</p></div></div>
+        <div class="cover-edition">ANDROID &amp; WEB <span>v{version} / build {release['build']}</span></div><p class="cover-revision">文档修订：{html.escape(release.get('documentation_date', release['release_date']))}</p>
       </section>
       <nav class="book-toc" id="book-contents"><p class="eyebrow">阅读导航 / CONTENTS</p><h1>从这里，走进时光。</h1>
         <p>这份手册完整收录网站的 {len(paths)} 个内容页，按阅读顺序整理。<br>点击目录、文内链接或 PDF 书签，可以跳转到相应章节。</p>

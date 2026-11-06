@@ -106,3 +106,14 @@ td p, th p { margin: 0; }
 #page-releases h2 { margin-top: 4mm; }
 #page-releases p { margin-bottom: 2mm; }
 .screen-only { display: none; }
+
+figure img.workspace-shot { max-height: 85mm; width: auto; border: .3mm solid #dce4d5; border-radius: 2mm; }
+
+.cover-revision { font-size: 8pt; color: #788574; margin-top: 2mm; }
+/* Keep new overview and maintenance chapters from leaving short spill pages. */
+#page-index .app-gallery img { width: auto; max-width: 100%; max-height: 65mm; }
+#page-index .guide-cards { margin: 2mm 0 3mm; }
+#page-index .guide-card { padding: 3mm; }
+#page-guide--service-hub, #page-guide--deployment { font-size: 9.8pt; line-height: 1.5; }
+#page-guide--service-hub figure img.workspace-shot { max-height: 70mm; }
+#page-guide--service-hub h2, #page-guide--deployment h2 { margin-top: 4mm; }

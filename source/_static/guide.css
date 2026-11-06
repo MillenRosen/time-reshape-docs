@@ -183,3 +183,6 @@ footer p { font-size: 11px; line-height: 1.7; }
 .live-entry-panel .live-entry-address{font-size:13px;overflow-wrap:anywhere;color:#285f50}
 .live-entry-panel .live-entry-address:empty{display:none}
 .live-entry-panel .live-entry-note{font-size:12px;color:#6d7c6b}
+
+/* Wide maintenance screenshots stay readable on desktop and scale on phones. */
+.rst-content img.workspace-shot { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 14px; }

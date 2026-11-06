@@ -7,3 +7,5 @@
 - `guide.css`、`guide.js` 与正文：为本手册新编写。Sphinx、Read the Docs 主题及 MyST 保留各自上游许可。
 
 品牌、IP 形象和应用截图用于本项目说明，未另行授予第三方商标或形象使用权。
+
+- `service-hub.webp`：2026-11-05 服务台 v2.2.0 浏览器检查截图的资源区域裁切，来自 `apps/service-hub/checks/tool-audit/hub-desktop.png`；数字仅代表采样时刻，不作为当前资源承诺。

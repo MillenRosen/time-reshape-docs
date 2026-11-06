@@ -16,6 +16,7 @@ def normalize(value):
 def check(path):
     manifest = json.loads(path.with_suffix(".json").read_text())
     reader = PdfReader(path)
+    assert not reader.metadata.author, "PDF should not contain author metadata"
     assert not reader.is_encrypted, "The public guide must be readable without a password"
     assert len(reader.pages) == manifest["pages"]
     assert len(reader.pages) > len(manifest["chapters"])
@@ -48,6 +49,7 @@ def check(path):
             if isinstance(destination, str):
                 assert destination in reader.named_destinations, f"Broken PDF link: {destination}"
     joined = normalize("".join(body_text))
+    assert "tnlearn" not in joined.lower(), "Unrelated reference in user handbook"
     missing, paragraphs, chapter_pages = [], 0, {}
     for chapter in manifest["chapters"]:
         destination = reader.named_destinations[chapter["id"]]

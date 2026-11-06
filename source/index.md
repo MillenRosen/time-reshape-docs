@@ -5,7 +5,9 @@
   <div class="hero-scene"><img class="hero-landscape" src="_static/images/dashuifa.webp" alt="圆明园大水法现存遗址"><img class="hero-mascot" src="_static/images/yuanyuan.webp" alt="圆圆，圆明园记忆精灵"><span class="scene-caption">北京 · 圆明园大水法</span></div>
 </div>
 
-<div class="edition-line"><span class="status-dot"></span> Android 与网页 · v{{ version }} <span>使用指南 · 安装 · 常见问题</span></div>
+<div class="edition-line"><span class="status-dot"></span> Android 与网页 · v{{ version }} <span>使用指南 · 后台管理 · 部署</span></div>
+
+文档核对日期：{{ documentation_date }}；软件发布日期与文档修订日期分别记录。
 
 <p class="screen-only pdf-reading-link"><a href="_downloads/time-reshape-guide.pdf" download>把完整手册留在身边 · 下载 PDF ↗</a></p>
 
@@ -23,6 +25,16 @@
 <figure><img src="_static/images/app-home.webp" alt="时光重塑首页：问一问历史与看一看遗迹两个入口"><figcaption>首页 · 从好奇心出发</figcaption></figure>
 <figure><img src="_static/images/app-chat.webp" alt="史实问答欢迎页，中央为圆圆与牛首形象"><figcaption>问答 · 循着史料寻找答案</figcaption></figure>
 <figure><img src="_static/images/app-restoration.webp" alt="大水法复原结果，大屏小窗对照同一帧"><figcaption>影像 · 对照同一刻的今昔</figcaption></figure>
+</div>
+
+## 维护与交付
+
+模型调整、计算资源和工程部署分别有独立说明，不需要在手机设置里寻找这些入口。
+
+<div class="guide-cards maintenance-cards">
+<a class="guide-card" href="guide/management.html"><span class="card-number">04 / 管模型</span><h3>配准与正式发布</h3><p>比较模型、保存草稿、发布与回退，分清候选和正式版本。</p><span class="card-more">打开模型后台指南 ↗</span></a>
+<a class="guide-card" href="guide/service-hub.html"><span class="card-number">05 / 看资源</span><h3>按需启动服务</h3><p>选择 GPU 范围、查看资源曲线，关闭闲置实验释放显存。</p><span class="card-more">打开服务台指南 ↗</span></a>
+<a class="guide-card" href="guide/deployment.html"><span class="card-number">06 / 做部署</span><h3>读懂工程交付</h3><p>查看软件包目录、必要环境、部署步骤与验证范围。</p><span class="card-more">打开部署说明 ↗</span></a>
 </div>
 
 ## 认识时光重塑
@@ -53,6 +65,14 @@ guide/restoration
 guide/live-camera
 guide/account
 guide/privacy
+```
+
+```{toctree}
+:hidden:
+:caption: 管理与部署
+guide/management
+guide/service-hub
+guide/deployment
 ```
 
 ```{toctree}
